@@ -1,4 +1,4 @@
-package week1;
+package week2.labs;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -136,6 +136,7 @@ public class Loops {
         return random_number;
     }
 
+    /* NEW TASK */
     public static void drawStarsPiramid(int rows) {
         for (int i = 1; i <= rows; ++i) {
             for (int j = 1; j <= i; ++j) {
@@ -145,6 +146,7 @@ public class Loops {
         }
     }
 
+    /* NEW TASK */
     public static void drawNumbersPiramid(int rows) {
         for (int i = 1; i <= rows; ++i) {
             for (int j = 1; j <= i; ++j) {
@@ -154,6 +156,7 @@ public class Loops {
         }
     }
 
+    /* NEW TASK */
     public static void drawInvertedPiramid(int rows) {
         for (int i = rows; i >= 1; --i) {
             for (int j = 1; j <= i; ++j) {
