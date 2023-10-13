@@ -26,16 +26,21 @@ public class DataStructures {
         return users
                 .stream()
                 .filter(user -> {
-            return user.getName().equals(name);
-        }).findFirst();
+                    return user.getName().equals(name);
+                }).findFirst();
     }
 
     public List<User> findAgeGreaterThan(int age) {
-        return users.stream().filter(user -> age >= user.getAge()).toList();
+        return users
+                .stream()
+                .filter(user -> age >= user.getAge())
+                .toList();
     }
 
     public void getByGender(Gender gender) {
-        users = users.stream().filter(user -> user.getGender().equals(gender)).collect(Collectors.toList());
+        users = users.stream()
+                .filter(user -> user.getGender().equals(gender))
+                .collect(Collectors.toList());
         for (User u : users){
             System.out.println(u.getName());
         }
