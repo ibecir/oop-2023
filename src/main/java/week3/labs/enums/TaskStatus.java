@@ -1,6 +1,6 @@
 package week3.labs.enums;
 
-public enum taskStatus {
+public enum TaskStatus {
     TO_DO, IN_PROGRESS, COMPLETED, CANCELLED
 }
 

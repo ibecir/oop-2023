@@ -1,15 +1,15 @@
 package week3.labs.model;
 
-import week3.labs.enums.taskStatus;
+import week3.labs.enums.TaskStatus;
 
 
 public class TaskItem {
     private int id;
     private String description;
-    private taskStatus status;
+    private TaskStatus status;
 
 
-    public TaskItem(int id, String description, taskStatus status) {
+    public TaskItem(int id, String description, TaskStatus status) {
         this.id = id;
         this.description = description;
         this.status = status;
@@ -23,11 +23,11 @@ public class TaskItem {
         this.description = description;
     }
 
-    public taskStatus getStatus() {
+    public TaskStatus getStatus() {
         return status;
     }
 
-    public void setStatus(taskStatus status) {
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
 

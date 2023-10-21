@@ -1,23 +1,22 @@
 package week3.labs.ds;
 
-import week3.labs.enums.taskStatus;
+import week3.labs.enums.TaskStatus;
 import week3.labs.model.TaskItem;
 
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class DataStructures {
     private List<TaskItem> tasks;
 
     public DataStructures() {
         tasks = Arrays.asList(
-                new TaskItem(1,"Push lab code to the github", taskStatus.TO_DO),
-                new TaskItem(2, "Prepare for the quiz", taskStatus.IN_PROGRESS),
-                new TaskItem(3, "Go over tasks from Lab2", taskStatus.COMPLETED),
-                new TaskItem(4, "Night out", taskStatus.CANCELLED));
+                new TaskItem(1,"Push lab code to the github", TaskStatus.TO_DO),
+                new TaskItem(2, "Prepare for the quiz", TaskStatus.IN_PROGRESS),
+                new TaskItem(3, "Go over tasks from Lab2", TaskStatus.COMPLETED),
+                new TaskItem(4, "Night out", TaskStatus.CANCELLED));
     }
     //create a method to get all objects
     public List<TaskItem> getAllObjects() {
@@ -26,7 +25,7 @@ public class DataStructures {
 
     //create a method getByStatus that will accept a Status parameter and filter the tasks with the provided status
     public Optional<TaskItem> getByStatus(String status) {
-        taskStatus desiredStatus = taskStatus.valueOf(status.toUpperCase());
+        TaskStatus desiredStatus = TaskStatus.valueOf(status.toUpperCase());
         return tasks
                 .stream()
                 .filter(taskItem -> {
