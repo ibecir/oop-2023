@@ -18,4 +18,10 @@ public class Start {
         // you can communicate via messages (the methods)
         a.setBalance(-100);
     }
+
+
+
+
 }
+
+
