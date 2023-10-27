@@ -59,6 +59,12 @@ public class Start {
         // Downcasting is different and it does not happen automatically
         // We are saying to Java, this animal passed as the parameter is the Tiger and threat it as
         // it is the Tiger. YOU HAVE TO BE CAREFUL AS IT WILL THROW AN EXCEPTION IF YOU MISS THE CASTING
-        Tiger myLocalTiger = (Tiger) animal;
+        // You can add the instanceof check
+
+         if(animal instanceof Tiger) {
+             Tiger myLocalTiger = (Tiger) animal;
+             myLocalTiger.getNumOfTeeth();
+         }
+
     }
 }
