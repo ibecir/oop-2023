@@ -1,4 +1,4 @@
-package week4.lectures.labs.people;
+package week4.labs.people;
 
 public class Teacher extends Person{
     private int salary;

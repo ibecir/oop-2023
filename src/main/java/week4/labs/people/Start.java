@@ -1,7 +1,4 @@
-package week4.lectures.labs.people;
-
-import java.util.ArrayList;
-import java.util.List;
+package week4.labs.people;
 
 public class Start {
     public static void main(String[] args) {

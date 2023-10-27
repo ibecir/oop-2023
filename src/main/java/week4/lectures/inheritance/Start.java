@@ -8,6 +8,15 @@ public class Start {
 
         Bicycle bicycle = new Bicycle(30, 2, BicycleType.GT);
         System.out.println(bicycle.getBicycleType());
+
+        changeObject(bicycle);
+
+        System.out.println(bicycle.getBicycleType());
+
         bicycle.produceNoise();
+    }
+
+    public static void changeObject(Bicycle bicycle){
+        bicycle.setBicycleType(BicycleType.BMT);
     }
 }

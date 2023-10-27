@@ -1,4 +1,4 @@
-package week4.lectures.labs.shape;
+package week4.labs.shape;
 
 public class Start {
     public static void main(String[] args) {
