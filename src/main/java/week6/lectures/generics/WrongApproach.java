@@ -1,5 +1,7 @@
 package week6.lectures.generics;
 
+import java.util.ArrayList;
+
 // Class to hold an integer value and print out that integer when we want
 class IntegerPrinter {
     private Integer thingToPrint;
@@ -27,7 +29,7 @@ class IntegerPrinter {
 // For the more complex classes this becomes awful approach
 // Generics allows you to accomplish the same thing with one flexible class for many types
 class StringPrinter{
-    private String thingToPrint;
+    protected String thingToPrint;
 
     public StringPrinter(String thingToPrint) {
         this.thingToPrint = thingToPrint;
@@ -38,6 +40,22 @@ class StringPrinter{
     }
 
     public void setThingToPrint(String thingToPrint) {
+        this.thingToPrint = thingToPrint;
+    }
+}
+
+class DoublePrinter{
+    protected Double thingToPrint;
+
+    public DoublePrinter(Double thingToPrint) {
+        this.thingToPrint = thingToPrint;
+    }
+
+    public Double getThingToPrint() {
+        return thingToPrint;
+    }
+
+    public void setThingToPrint(Double thingToPrint) {
         this.thingToPrint = thingToPrint;
     }
 }

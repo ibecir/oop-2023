@@ -1,6 +1,9 @@
 package week6.lectures.generics;
 
-public class Animal {
+import javax.swing.text.html.Option;
+import java.util.Optional;
+
+class Animal {
     private int numOfLegs;
 
     public int getNumOfLegs() {
