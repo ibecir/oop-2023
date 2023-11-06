@@ -1,4 +1,4 @@
-package week6.lectures.lambdafunctions.interfaces;
+package week7.lectures.lambdafunctions.interfaces;
 
 // Interfaces with one single method is called an FUNCTIONAL INTERFACE
 // SAM interfaces - Single Abstract Method interface

@@ -1,4 +1,4 @@
-package week6.lectures.lambdafunctions.classes;
+package week7.lectures.lambdafunctions.classes;
 
 public class Component{
     private String serialNo;

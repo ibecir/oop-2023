@@ -1,8 +1,8 @@
-package week6.lectures.lambdafunctions;
+package week7.lectures.lambdafunctions;
 
-import week6.lectures.lambdafunctions.classes.Engine;
-import week6.lectures.lambdafunctions.interfaces.Printable;
-import week6.lectures.lambdafunctions.interfaces.Readable;
+import week7.lectures.lambdafunctions.classes.Engine;
+import week7.lectures.lambdafunctions.interfaces.Printable;
+import week7.lectures.lambdafunctions.interfaces.Readable;
 
 public class Startable {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package week6.lectures.lambdafunctions.classes;
+package week7.lectures.lambdafunctions.classes;
 
-import week6.lectures.lambdafunctions.interfaces.Printable;
-import week6.lectures.lambdafunctions.interfaces.Readable;
+import week7.lectures.lambdafunctions.interfaces.Printable;
+import week7.lectures.lambdafunctions.interfaces.Readable;
 
 public class Engine extends Component implements Readable, Printable {
     private int horsePower;
