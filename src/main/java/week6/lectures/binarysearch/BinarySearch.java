@@ -9,21 +9,23 @@ class BinarySearch {
     // Returns index of x if it is present in arr[].
     int binarySearch(int arr[], int x)
     {
-        int l = 0, r = arr.length - 1;
-        while (l <= r) {
-            int m = l + (r - l) / 2;
+        // int arr[] = { 2, 3, 4, 10, 40, 7, 18 };
+        // { 2, 3, 4, 7, 10, 18, 40 }
+        int left = 0, right = arr.length - 1;
+        while (left <= right) {
+            int middle = left + (right - left) / 2;
 
             // Check if x is present at mid
-            if (arr[m] == x)
-                return m;
+            if (arr[middle] == x)
+                return middle;
 
             // If x greater, ignore left half
-            if (arr[m] < x)
-                l = m + 1;
+            if (arr[middle] < x)
+                left = middle + 1;
 
                 // If x is smaller, ignore right half
             else
-                r = m - 1;
+                right = middle - 1;
         }
 
         // If we reach here, then element was
