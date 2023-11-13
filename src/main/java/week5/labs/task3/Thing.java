@@ -51,8 +51,6 @@ public class Thing extends Box{
         if (object != null && object instanceof Thing){
             isEqual = (this.name == ((Thing) object).name);
         }
-
         return isEqual;
     }
-
 }
