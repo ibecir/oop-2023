@@ -45,13 +45,10 @@ class MainRun {
         itemList.put(new Honey("123", "Pravi med", 30.00, HoneyType.LIVADSKI), 2);
         itemList.put(new Milk("222", "Meggle", 2.70, 3.8), 5);
 
-        List<HashMap<Item, Integer>> items = new ArrayList<>();
-        items.add(itemList);
-
         Order firstOrder = new Order(
                 String.valueOf(1),
                 new Date(System.currentTimeMillis()),
-                items
+                itemList
         );
 
         HashMap<Item, Integer> secondItemList = new HashMap<>();
@@ -59,13 +56,11 @@ class MainRun {
         secondItemList.put(new Milk("222", "Meggle", 2.70, 3.8), 5);
         secondItemList.put(new Milk("999", "Nase mlijeko", 2.20, 3.2), 4);
 
-        List<HashMap<Item, Integer>> itemsSecond = new ArrayList<>();
-        itemsSecond.add(secondItemList);
 
         Order secondOrder = new Order(
                 String.valueOf(2),
                 new Date(System.currentTimeMillis()),
-                itemsSecond
+                secondItemList
         );
 
         Person becir = new Person("Becir", 29, Arrays.asList(firstOrder));
@@ -84,14 +79,14 @@ class MainRun {
         for (Person p : personList){
             System.out.println("Person " + p.getName() + " account: ");
             for (Order o : p.getOrders()){
+                int totalAmount = 0;
+                String orderName = "";
                 System.out.println("Order " + o.getOrderNo() + " belongs to " + p.getName());
-                for (Map<Item, Integer> i : o.getItems()){
-                    for (Item it : i.keySet()){
-                        System.out.println(
-                                "Item " + it.getBarcode() + " contains " + i.get(it)
-                        );
-                    }
+                for (Map.Entry<Item, Integer> item : o.getItems().entrySet()){
+                    orderName = item.getKey().getBarcode();
+                    totalAmount += item.getKey().getPrice() * item.getValue();
                 }
+                System.out.println("Total amount for order " + orderName + " is " + totalAmount);
             }
         }
     }

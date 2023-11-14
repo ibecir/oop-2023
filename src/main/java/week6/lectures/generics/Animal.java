@@ -1,8 +1,5 @@
 package week6.lectures.generics;
 
-import javax.swing.text.html.Option;
-import java.util.Optional;
-
 class Animal {
     private int numOfLegs;
 
@@ -14,7 +11,7 @@ class Animal {
         this.numOfLegs = numOfLegs;
     }
 
-    public void eat(){
+    public void eat() {
         System.out.println("Animal Eating");
     }
 }

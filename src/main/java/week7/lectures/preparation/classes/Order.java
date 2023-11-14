@@ -7,9 +7,9 @@ import java.util.List;
 public class Order {
     private String orderNo;
     private Date createAt;
-    private List<HashMap<Item, Integer>> items;
+    private HashMap<Item, Integer> items;
 
-    public Order(String orderNo, Date createAt, List<HashMap<Item, Integer>> items) {
+    public Order(String orderNo, Date createAt, HashMap<Item, Integer> items) {
         this.orderNo = orderNo;
         this.createAt = createAt;
         this.items = items;
@@ -31,11 +31,11 @@ public class Order {
         this.createAt = createAt;
     }
 
-    public List<HashMap<Item, Integer>> getItems() {
+    public HashMap<Item, Integer> getItems() {
         return items;
     }
 
-    public void setItems(List<HashMap<Item, Integer>> items) {
+    public void setItems(HashMap<Item, Integer> items) {
         this.items = items;
     }
 }
