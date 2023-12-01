@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import week10.lectures.classes.unittests.SimpleCalculator;
+import week11.lectures.unittests.SimpleCalculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 

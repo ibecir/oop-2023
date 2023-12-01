@@ -23,9 +23,8 @@ public class AccountBalance {
     }
 
     public void setBalance(int balance) {
-        if(balance <= 0)
-            throw new InvalidParameterException("Balance has to be greater than 0!");
-
+        if(balance < 0)
+            throw new InvalidParameterException("Balance cannot be negative");
         this.balance = balance;
     }
 

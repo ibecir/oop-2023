@@ -1,4 +1,4 @@
-package week10.lectures.classes.unittests;
+package week11.lectures.unittests;
 
 // Single piece of code/unit is being tested
 // Unit test isolates single piece of code and verifies that that piece is working correctly

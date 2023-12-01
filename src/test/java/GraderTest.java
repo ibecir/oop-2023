@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import week10.lectures.classes.unittests.Grader;
+import week11.lectures.unittests.Grader;
 
 import static org.junit.jupiter.api.Assertions.*;
 

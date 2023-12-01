@@ -2,6 +2,7 @@ package week3.lectures;
 
 import week3.lectures.db.DbConnect;
 import week3.lectures.ds.DataStructures;
+import week3.lectures.enums.Gender;
 import week3.lectures.model.User;
 
 import java.sql.SQLException;

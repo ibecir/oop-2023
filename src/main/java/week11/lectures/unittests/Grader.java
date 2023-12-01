@@ -1,4 +1,4 @@
-package week10.lectures.classes.unittests;
+package week11.lectures.unittests;
 
 public class Grader {
     public char determineLetterGrade(int numberGrade) {
