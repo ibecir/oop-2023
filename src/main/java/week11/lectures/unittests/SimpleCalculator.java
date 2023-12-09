@@ -8,6 +8,6 @@ package week11.lectures.unittests;
 // We will be using the JUnit framework for our unit tests (there are similar frameworks in other programming languages)
 public class SimpleCalculator {
     public int add(int numA, int numB) {
-        return numA + numB;
+        return numA - numB;
     }
 }
