@@ -53,8 +53,8 @@ public class FileIO {
     }
     public static void main(String[] args) throws IOException {
         String[] names = {"Becir", "Adnan", "Amila"};
-        arrayFileWrite(names);
+//        arrayFileWrite(names);
         readWholeFile();
-        readWholeFileList();
+//        readWholeFileList();
     }
 }
