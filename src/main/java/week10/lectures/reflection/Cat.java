@@ -13,6 +13,7 @@ public class Cat {
         return name;
     }
 
+
     public int getAge() {
         return age;
     }
