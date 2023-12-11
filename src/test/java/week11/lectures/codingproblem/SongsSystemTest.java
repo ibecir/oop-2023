@@ -48,4 +48,11 @@ class SongsSystemTest {
         Song song = system.getLongestSong();
         assertEquals("Sucker", song.trackName());
     }
+
+    @Test
+    void songWithIdHundred_shouldThrowException(){
+        assertThrows(EmptySongsListException.class, () -> {
+            system.getSongByIdNonOptional(100);
+        });
+    }
 }

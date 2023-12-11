@@ -27,8 +27,6 @@ class SongsSystem {
         }
 
         Optional<Song> s = system.getSongById(31);
-//        if(s.isEmpty())
-//            throw new NoSuchElementException("Missing song with that id");
 
         Song highestPopularitySong = system.getHighestPopularitySong();
         System.out.println(highestPopularitySong);
@@ -67,6 +65,13 @@ class SongsSystem {
                 return Optional.of(s);
         }
         return Optional.ofNullable(null);
+    }
+    public Song getSongByIdNonOptional(int id){
+        for (Song s : songs){
+            if(s.id() == id)
+                return s;
+        }
+        throw new EmptySongsListException("Song could not be found");
     }
     public Song getHighestPopularitySong(){
         if(songs.size() == 0)
