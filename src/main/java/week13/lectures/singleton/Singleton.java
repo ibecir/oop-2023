@@ -1,4 +1,4 @@
-package week12.lectures.singleton;
+package week13.lectures.singleton;
 
 // Not thread safe piece of code
 public class Singleton {

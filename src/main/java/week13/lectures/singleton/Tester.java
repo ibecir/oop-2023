@@ -1,4 +1,4 @@
-package week12.lectures.singleton;
+package week13.lectures.singleton;
 
 public class Tester {
     public static void main(String[] args) {
