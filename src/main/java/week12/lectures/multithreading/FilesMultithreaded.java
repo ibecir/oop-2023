@@ -3,7 +3,6 @@ package week12.lectures.multithreading;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,9 +53,6 @@ public class FilesMultithreaded {
         long endTime = System.currentTimeMillis();
         long elapsedTime = endTime - startTime;
         System.out.println("MULTITHREADED - Elapsed Time: " + elapsedTime + " milliseconds");
-
-//        for (String line : searchResult)
-//            System.out.println(line);
     }
 
     public static void searchFile(String searchCriteria) {

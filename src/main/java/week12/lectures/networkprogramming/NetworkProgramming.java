@@ -11,11 +11,11 @@ import java.util.regex.Pattern;
 // https://jsonbin.io/quick-store/6578205fdc74654018821d0c
 public class NetworkProgramming {
     public static void main(String[] args) throws IOException {
-        // readPageData("https://klix.ba");
-        // readJson("https://api.jsonbin.io/v3/qs/6578205fdc74654018821d0c");
+//         readPageData("https://klix.ba");
+//        readJson("https://api.jsonbin.io/v3/qs/657c5af41f5677401f0e348d");
         // postExample();
-        socketServer(2345);
-        socketClient("10.14.10.4", 2345);
+//        socketServer(2345);
+        socketClient("192.168.0.101", 2345);
     }
 
     public static void readUrl(String urlAddress) {
@@ -62,6 +62,7 @@ public class NetworkProgramming {
         JSONObject jsonObject = new JSONObject(content);
         System.out.println(jsonObject.getJSONObject("record").getJSONArray("likes"));
     }
+
     public static void postExample() throws IOException {
         URL url = new URL("http://localhost:8080/articles/");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -77,16 +78,14 @@ public class NetworkProgramming {
         System.out.println(connection.getResponseCode());
     }
 
-    public static void socketServer(int port){
+    public static void socketServer(int port) {
         try {
             ServerSocket serverSocket = new ServerSocket(2345);
-            while (true){
+            while (true) {
                 Socket connection = serverSocket.accept();
                 InputStream inputStream = connection.getInputStream();
 
                 System.out.println("Client connected: " + connection.getInetAddress());
-
-
                 // Read data from the client
                 byte[] buffer = new byte[1024];
                 int bytesRead = inputStream.read(buffer);
@@ -98,7 +97,7 @@ public class NetworkProgramming {
         }
     }
 
-    public static void socketClient(String address, int port){
+    public static void socketClient(String address, int port) {
         try {
             Socket connection = new Socket(address, port);
             OutputStream outputStream = connection.getOutputStream();
