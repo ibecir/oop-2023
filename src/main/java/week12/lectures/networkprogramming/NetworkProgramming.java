@@ -12,10 +12,11 @@ import java.util.regex.Pattern;
 public class NetworkProgramming {
     public static void main(String[] args) throws IOException {
 //         readPageData("https://klix.ba");
-//        readJson("https://api.jsonbin.io/v3/qs/657c5af41f5677401f0e348d");
+//        readJson("https://api.jsonbin.io/v3/qs/6580223ddc7465401884b2ba");
         // postExample();
 //        socketServer(2345);
-        socketClient("192.168.0.101", 2345);
+        socketClient("192.168.3.252", 2345);
+//        readSimpleJson();
     }
 
     public static void readUrl(String urlAddress) {
@@ -32,7 +33,8 @@ public class NetworkProgramming {
         BufferedReader inputStream = new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8));
         String content = "";
         String line = null;
-        while ((line = inputStream.readLine()) != null) content = content + line;
+        while ((line = inputStream.readLine()) != null)
+            content = content + line;
 
         String pattern = "<h2[^>]*>(.*?)</h2>";
 
@@ -54,13 +56,16 @@ public class NetworkProgramming {
 
     public static void readJson(String urlAddress) throws IOException {
         URL url = new URL(urlAddress);
-        BufferedReader inputStream = new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8));
+        BufferedReader inputStream = new BufferedReader(
+                new InputStreamReader(url.openStream(), StandardCharsets.UTF_8)
+        );
         String content = "";
         String line = null;
-        while ((line = inputStream.readLine()) != null) content = content + line;
+        while ((line = inputStream.readLine()) != null)
+            content = content + line;
 
         JSONObject jsonObject = new JSONObject(content);
-        System.out.println(jsonObject.getJSONObject("record").getJSONArray("likes"));
+        System.out.println(jsonObject.getJSONObject("record"));
     }
 
     public static void postExample() throws IOException {
@@ -102,12 +107,8 @@ public class NetworkProgramming {
             Socket connection = new Socket(address, port);
             OutputStream outputStream = connection.getOutputStream();
 
-            // Send a message to the server
-            String message = "Hello, Server!";
-            outputStream.write(message.getBytes());
-            System.out.println("Sent message to server: " + message);
+            outputStream.write("Hello, my beutifle nice server!".getBytes());
 
-            // Close the socket
             outputStream.close();
             connection.close();
         } catch (IOException e) {
