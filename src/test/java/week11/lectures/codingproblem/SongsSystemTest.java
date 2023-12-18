@@ -1,6 +1,5 @@
 package week11.lectures.codingproblem;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,8 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SongsSystemTest {
     static SongsSystem system;
+
     @BeforeEach
-    void init(){
+    void init() {
         system = new SongsSystem("songs.csv");
     }
 
@@ -22,30 +22,43 @@ class SongsSystemTest {
         SongsSystem systemWrong = new SongsSystem("becir.csv");
         assertEquals(0, systemWrong.songs.size());
     }
+
     @Test
-    void ifSongsPresent_sizeShouldBeFifty(){
+    void ifSongsPresent_sizeShouldBeFifty() {
         assertEquals(50, system.songs.size());
     }
+
     @Test
-    void songWithId100_shouldNotBePresent(){
+    void songWithId100_shouldNotBePresent() {
         assertTrue(system.getSongById(100).equals(Optional.ofNullable(null)));
     }
+
     @Test
-    void songWithId100_shouldBeNull(){
+    void songWithId100_shouldBeNull() {
         assertNull(system.getSongById(100).orElse(null));
     }
+
     @Test
-    void songWithId1_shouldBePresent(){
+    void songWithId1_shouldBePresent() {
         assertFalse(!system.getSongById(1).isPresent());
     }
+
     @Test
-    void mostPopularSong_shouldNotBeNull(){
+    void mostPopularSong_shouldNotBeNull() {
         Song song = system.getHighestPopularitySong();
         assertNotNull(song);
     }
+
     @Test
-    void longestSong_shouldBeNamedSucker(){
+    void longestSong_shouldBeNamedSucker() {
         Song song = system.getLongestSong();
         assertNotEquals("Sucker", song.trackName());
+    }
+
+    @Test
+    void songWithIdHundred_shouldThrowException() {
+        assertThrows(EmptySongsListException.class, () -> {
+            system.getSongByIdNonOptional(100);
+        });
     }
 }
