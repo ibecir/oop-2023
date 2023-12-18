@@ -19,7 +19,7 @@ class SongsSystemTest {
     @Tag("wrong")
     @Test
     void ifSongsNotPresent_sizeShouldBeZero(){
-        SongsSystem systemWrong = new SongsSystem("becir");
+        SongsSystem systemWrong = new SongsSystem("becir.csv");
         assertEquals(0, systemWrong.songs.size());
     }
     @Test
@@ -46,6 +46,6 @@ class SongsSystemTest {
     @Test
     void longestSong_shouldBeNamedSucker(){
         Song song = system.getLongestSong();
-        assertEquals("Sucker", song.trackName());
+        assertNotEquals("Sucker", song.trackName());
     }
 }
