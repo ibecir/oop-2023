@@ -43,7 +43,14 @@ class SongsSystem {
         for (String line : lines) {
             String[] songParts = line.split(",");
 
-            Song s = new Song(songParts[0] != "" ? Integer.parseInt(songParts[0]) : 000, songParts[1], songParts[2], songParts[3], songParts[4] != "" ? Integer.parseInt(songParts[4]) : 000, songParts[5] != "" ? Integer.parseInt(songParts[5]) : 000);
+            Song s = new Song(
+                    songParts[0] != "" ? Integer.parseInt(songParts[0]) : 000,
+                    songParts[1],
+                    songParts[2],
+                    songParts[3],
+                    songParts[4] != "" ? Integer.parseInt(songParts[4]) : 000,
+                    songParts[5] != "" ? Integer.parseInt(songParts[5]) : 000
+            );
 
             songs.add(s);
         }
