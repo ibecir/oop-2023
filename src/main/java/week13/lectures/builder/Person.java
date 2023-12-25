@@ -1,9 +1,11 @@
 package week13.lectures.builder;
 
 class Person {
+    // Required params
     private String firstName;
     private String lastName;
 
+    // Optional build params
     private int age;
     private int height;
 
@@ -38,6 +40,7 @@ class Person {
         private int age;
         private int height;
 
+        // Required parameters are in constructor of the builder
         public PersonBuilder(String firstName, String lastName) {
             this.firstName = firstName;
             this.lastName = lastName;

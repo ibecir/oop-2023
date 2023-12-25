@@ -33,7 +33,7 @@ class Socket {
 class SocketClassAdapterImpl extends Socket implements SocketAdapter {
     @Override
     public Volt get120Volt() {
-        return getVolt();
+        return this.getVolt();
     }
 
     @Override
