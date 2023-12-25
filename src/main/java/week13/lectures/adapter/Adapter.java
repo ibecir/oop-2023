@@ -31,19 +31,28 @@ class Socket {
 }
 
 class SocketClassAdapterImpl extends Socket implements SocketAdapter {
+    // Does not have to extend Socket class, it can also use the Java composition
+    // Using Composition for adapter pattern
+    // private Socket sock = new Socket();
     @Override
     public Volt get120Volt() {
+        // Or with Java composition
+        // return sock.getVolt();
         return this.getVolt();
     }
 
     @Override
     public Volt get12Volt() {
+        // Or with Java composition
+        // Volt v = sock.getVolt();
         Volt v = getVolt();
         return convertVolt(v, 10);
     }
 
     @Override
     public Volt get3Volt() {
+        // Or with Java composition
+        // Volt v = sock.getVolt();
         Volt v = getVolt();
         return convertVolt(v, 40);
     }
