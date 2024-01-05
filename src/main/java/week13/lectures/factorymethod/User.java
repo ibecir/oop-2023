@@ -1,5 +1,6 @@
-package week13.lectures.factorydesign;
+package week13.lectures.factorymethod;
 
+// This can be an interface, or even a concrete class
 abstract class Student {
 
     public abstract int getStudentAge();
@@ -51,6 +52,7 @@ class PhDGraduate extends Student {
     }
 }
 
+// This can also be a String, enums are not the part of the pattern
 enum StudentType {
     UNDERGRADUATE,
     GRADUATE,
