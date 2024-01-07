@@ -20,3 +20,9 @@ public class Singleton {
         return instance;
     }
 }
+
+class Becir {
+    public static void main(String[] args) {
+
+    }
+}

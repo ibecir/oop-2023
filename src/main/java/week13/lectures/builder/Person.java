@@ -46,6 +46,13 @@ class Person {
             this.lastName = lastName;
         }
 
+        public PersonBuilder() {
+        }
+
+        public PersonBuilder(String firstName) {
+            this.firstName = firstName;
+        }
+
         public PersonBuilder setAge(int age) {
             this.age = age;
             return this;
@@ -65,9 +72,10 @@ class Person {
 
 class BuilderTest {
     public static void main(String[] args) {
-        Person person = new Person.PersonBuilder("Becir", "Isakovic")
-                .setAge(15)
+        Person becir = new Person.PersonBuilder("Becir", "Isakovic")
+                .setAge(150)
+                .setHeight(180)
                 .build();
-        System.out.println(person.getAge());
+        System.out.println(becir.getFirstName());
     }
 }
