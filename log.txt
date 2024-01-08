@@ -1,4 +1,0 @@
-This is a log message.
-
-This is a log message.
-Another log message.
