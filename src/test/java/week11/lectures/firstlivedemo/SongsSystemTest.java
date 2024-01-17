@@ -28,6 +28,9 @@ class SongsSystemTest {
 
     @Test
     void ifMultipleTest_thenPass() {
-        assertAll(() -> assertEquals("bad guy", system.getSongById(10).get().name()), () -> assertEquals("Sucker", system.getLongestSong().name()));
+        assertAll(
+                () -> assertEquals("bad guy", system.getSongById(10).get().name()),
+                () -> assertEquals("Sucker", system.getLongestSong().name())
+        );
     }
 }
