@@ -3,6 +3,8 @@ package week11.lectures.codingproblem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import year2023.week11.lectures.codingproblem.EmptySongsListException;
+import year2023.week11.lectures.codingproblem.SongsSystem;
 
 import java.util.Optional;
 

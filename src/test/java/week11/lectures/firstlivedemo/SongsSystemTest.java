@@ -2,6 +2,8 @@ package week11.lectures.firstlivedemo;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import year2023.week11.lectures.firstlivedemo.SongNotFoundExcepttion;
+import year2023.week11.lectures.firstlivedemo.SongsSystem;
 
 import static org.junit.jupiter.api.Assertions.*;
 
