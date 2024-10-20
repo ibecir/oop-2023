@@ -54,6 +54,8 @@ public class Methods {
         return sum;
     }
 
+
+
     /***
      * 2. Create a program that asks for the user's name and says how many characters the name contains.
      */

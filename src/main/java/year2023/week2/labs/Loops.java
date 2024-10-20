@@ -11,10 +11,9 @@ public class Loops {
 //        nNumbersSum();
 //        getNumbersInRange();
 //        calculateNthPower();
-//        printStars(5);
-//        guessNumber();
-//        drawStarsPiramid(10);
-        drawInvertedPiramid(10);
+        guessNumber();
+//        drawStarsPiramid(5);
+//        drawInvertedPiramid(10);
 //        drawInvertedPiramid(10);
     }
 
@@ -30,7 +29,11 @@ public class Loops {
                 correct = 1;
             }
         }
-        System.out.println("Secret is 'carrot'");
+        System.out.println("Right!!!     " +
+                "" +
+                "" +
+                "" +
+                "Secret is 'dnfjdfkng snfkrkj'");
     }
 
     public static void threeNumbersSumV1() {
